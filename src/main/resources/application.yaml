@@ -20,7 +20,7 @@ spring:
 
 envio:
   email:
-    remetente: marinhomiptch@gmail.com
+    remetente: ${REMETENTE}
     nomeRemetente: 'Mipdev'
 
 server:
