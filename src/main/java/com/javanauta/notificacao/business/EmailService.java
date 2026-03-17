@@ -39,6 +39,7 @@ public class EmailService {
             mimeMessageHelper.setTo(InternetAddress.parse(dto.getEmailUsuario()));
             mimeMessageHelper.setSubject("Notificacao de tarefa");
 
+
             Context context = new Context();
             context.setVariable("nomeTarefa", dto.getNomeTarefa());
             context.setVariable("dataEvento", dto.getDataEvento());
