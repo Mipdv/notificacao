@@ -3,7 +3,7 @@ name: PR Workflow
 on:
   pull_request:
     branches:
-      - master
+      - main
     types:
       - opened
       - synchronize
@@ -12,6 +12,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    env:
+      MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+      MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+      REMETENTE: ${{ secrets.REMETENTE }}
 
     steps:
       - name: Checkout repository
