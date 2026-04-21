@@ -16,7 +16,7 @@ spring:
           writetimeout: 5000
 
   thymeleaf:
-    enable: true
+    enabled: true
 
 envio:
   email:

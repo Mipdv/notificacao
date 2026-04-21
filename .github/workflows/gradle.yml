@@ -13,6 +13,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+      MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+      REMETENTE: ${{ secrets.REMETENTE }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
